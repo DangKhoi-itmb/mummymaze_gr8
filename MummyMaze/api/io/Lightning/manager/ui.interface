@@ -1,0 +1,175 @@
+import pygame
+from . import config
+from . import storage
+
+# ==== CÁC CLASS HỖ TRỢ UI (InputBox, Button) ====
+
+class InputBox:
+    def __init__(self, x, y, w, h, text='', is_password=False):
+        self.rect = pygame.Rect(x, y, w, h)
+        self.color_inactive = pygame.Color('lightskyblue3')
+        self.color_active = pygame.Color('dodgerblue2')
+        self.color = self.color_inactive
+        self.text = text
+        self.is_password = is_password
+        self.font = pygame.font.Font(None, 32)
+        self.txt_surface = self.font.render(text, True, self.color)
+        self.active = False
+
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self.rect.collidepoint(event.pos):
+                self.active = not self.active
+            else:
+                self.active = False
+            self.color = self.color_active if self.active else self.color_inactive
+        
+        if event.type == pygame.KEYDOWN:
+            if self.active:
+                if event.key == pygame.K_RETURN:
+                    return self.text
+                elif event.key == pygame.K_BACKSPACE:
+                    self.text = self.text[:-1]
+                else:
+                    self.text += event.unicode
+                
+                # Render lại text (ẩn nếu là pass)
+                display_text = "*" * len(self.text) if self.is_password else self.text
+                self.txt_surface = self.font.render(display_text, True, self.color)
+
+    def draw(self, screen):
+        screen.blit(self.txt_surface, (self.rect.x+5, self.rect.y+5))
+        pygame.draw.rect(screen, self.color, self.rect, 2)
+
+class Button:
+    def __init__(self, x, y, w, h, text, callback):
+        self.rect = pygame.Rect(x, y, w, h)
+        self.color = (50, 150, 50) # Màu xanh lá
+        self.text = text
+        self.font = pygame.font.Font(None, 32)
+        self.txt_surface = self.font.render(text, True, (255, 255, 255))
+        self.callback = callback
+
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self.rect.collidepoint(event.pos):
+                self.callback()
+
+    def draw(self, screen):
+        pygame.draw.rect(screen, self.color, self.rect)
+        text_rect = self.txt_surface.get_rect(center=self.rect.center)
+        screen.blit(text_rect)
+
+# ==== HÀM CHÍNH: XỬ LÝ LOGIN & MENU ====
+
+def show_login_and_menu(screen: pygame.Surface):
+    """
+    Hàm này quản lý vòng lặp Login/Register/Menu.
+    
+    Returns:
+        tuple: (action, profile)
+        - action (str): "NEW_GAME", "LOAD_GAME", hoặc "QUIT"
+        - profile (Profile): Object profile người chơi (hoặc None nếu Quit)
+    """
+    clock = pygame.time.Clock()
+    font = pygame.font.Font(None, 32)
+    
+    # Biến trạng thái cục bộ
+    current_state = "LOGIN" # LOGIN hoặc MENU
+    current_profile = None
+    status_msg = ""
+    
+    # --- UI ELEMENTS CHO LOGIN ---
+    input_user = InputBox(200, 150, 240, 40)
+    input_pass = InputBox(200, 210, 240, 40, is_password=True)
+
+    # Các hàm callback
+    def on_login():
+        nonlocal current_profile, current_state, status_msg
+        prof = storage.login(input_user.text, input_pass.text)
+        if prof:
+            current_profile = prof
+            current_state = "MENU"
+            status_msg = ""
+        else:
+            status_msg = "Sai User/Pass!"
+
+    def on_register():
+        nonlocal current_profile, current_state, status_msg
+        if not input_user.text or not input_pass.text:
+            status_msg = "Nhap thieu thong tin!"
+            return
+        prof = storage.register(input_user.text, input_pass.text, display_name=input_user.text)
+        if prof:
+            current_profile = prof
+            current_state = "MENU"
+            status_msg = ""
+        else:
+            status_msg = "User da ton tai!"
+    
+    def on_guest():
+        nonlocal current_profile, current_state
+        current_profile = storage.get_guest_profile()
+        current_state = "MENU"
+
+    btn_login = Button(200, 280, 100, 40, "Login", on_login)
+    btn_reg = Button(340, 280, 100, 40, "Register", on_register)
+    btn_guest = Button(200, 340, 240, 40, "Choi Guest", on_guest)
+
+    # --- VÒNG LẶP UI ---
+    while True:
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.QUIT:
+                return "QUIT", None
+            
+            if current_state == "LOGIN":
+                input_user.handle_event(event)
+                input_pass.handle_event(event)
+                btn_login.handle_event(event)
+                btn_reg.handle_event(event)
+                btn_guest.handle_event(event)
+            
+            elif current_state == "MENU":
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_RETURN: # Enter -> New Game
+                        return "NEW_GAME", current_profile
+                    elif event.key == pygame.K_l:    # L -> Load Game
+                        return "LOAD_GAME", current_profile
+                    elif event.key == pygame.K_q:    # Q -> Quit
+                        return "QUIT", None
+
+        # --- VẼ GIAO DIỆN ---
+        screen.fill((20, 20, 30)) # Màu nền tối
+
+        if current_state == "LOGIN":
+            # Tiêu đề
+            title = font.render("MUMMY MAZE LOGIN", True, (255, 200, 50))
+            screen.blit(title, (200, 80))
+            
+            # Nhãn
+            screen.blit(font.render("User:", True, (200,200,200)), (130, 160))
+            screen.blit(font.render("Pass:", True, (200,200,200)), (130, 220))
+            
+            # Input & Button
+            input_user.draw(screen)
+            input_pass.draw(screen)
+            btn_login.draw(screen)
+            btn_reg.draw(screen)
+            btn_guest.draw(screen)
+            
+            # Thông báo lỗi
+            if status_msg:
+                err = font.render(status_msg, True, (255, 100, 100))
+                screen.blit(err, (200, 400))
+
+        elif current_state == "MENU":
+            # Vẽ Menu
+            screen.blit(font.render(f"Hi, {current_profile.display_name}!", True, (100, 255, 100)), (50, 50))
+            screen.blit(font.render("--- MAIN MENU ---", True, (255, 255, 255)), (50, 100))
+            screen.blit(font.render("[ENTER] - New Game (Level 1)", True, (200, 200, 200)), (100, 160))
+            screen.blit(font.render("[L]     - Load Game", True, (200, 200, 200)), (100, 210))
+            screen.blit(font.render("[Q]     - Quit", True, (200, 200, 200)), (100, 260))
+
+        pygame.display.flip()
+        clock.tick(config.FPS)
