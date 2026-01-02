@@ -65,7 +65,13 @@ Sau khi đăng nhập thành công, bạn sẽ thấy các lựa chọn sau:
 
 
 III.	Trong màn chơi & cách lưu game.
+
+
 Khi đang trong mê cung, bạn sử dụng các phím sau để điều khiển và hệ thống:
+
+
 •	Lưu game (Save) : Nhấn phím S thì trạng thái hiện tại (vị trí nhân vật, quái vật, số bước đi, level hiện tại) sẽ được lưu vào hệ thống và dòng chữ saved sẽ xuất hiện ở cửa sổ terminal/console.
+
+
 •	Quay về Menu : Nhấn phím ESC thì game sẽ thoát ra màn hình Menu chính. 
 
