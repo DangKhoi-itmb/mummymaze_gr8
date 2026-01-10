@@ -5,10 +5,11 @@
 ## Cài đặt và Chạy game
 1. Cài đặt thư viện cần thiết:
    ```bash
-   pip install pygame-ce
+   pip install pygame-ce>=2.5.6
 
-- Chạy game từ thư mục gốc của dự án:
-      python -m MummyMaze.dist.main
+2. Chạy game từ thư mục gốc của dự án:
+   ```bash
+   python -m MummyMaze.dist.main
 
 Hướng dẫn sử dụng
 1. Màn hình đăng nhập
