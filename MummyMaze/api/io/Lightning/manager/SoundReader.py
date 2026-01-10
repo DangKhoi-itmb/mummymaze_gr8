@@ -1,6 +1,6 @@
 import random
 import pygame, os
-from api.io.Lightning.utils.ConfigFile import UI_PATH, MUSIC_PATH, SOUNDS_PATH
+from api.io.Lightning.utils.ConfigFile import MUSIC_PATH, SOUNDS_PATH
 
 class MusicManager:
     def __init__(self):
@@ -11,21 +11,18 @@ class MusicManager:
         self.MUSIC_END = pygame.USEREVENT + 1
         self.initialized = False
         self.current_mode = "menu"
-        self.volume = 0.5  # Default volume
+        self.volume = 0.5
 
     def initialize(self):
         if self.initialized: return
         try:
             if not pygame.mixer.get_init(): pygame.mixer.init()
             pygame.mixer.music.set_volume(self.volume)
-
-            start_music = os.path.join(MUSIC_PATH, "00.mp3")
-            if os.path.exists(start_music):
-                pygame.mixer.music.load(start_music)
-                pygame.mixer.music.play()
-                pygame.mixer.music.set_endevent(self.MUSIC_END)
-                self.music_enabled = True
-                self.initialized = True
+            # Nhạc khởi đầu
+            self._play_track("00.mp3")
+            pygame.mixer.music.set_endevent(self.MUSIC_END)
+            self.music_enabled = True
+            self.initialized = True
         except Exception as e:
             print(f'Music Init Error: {e}')
 
@@ -38,6 +35,7 @@ class MusicManager:
         return self.volume
 
     def handle_event(self, event):
+        """Tự động chuyển bài khi hết nhạc"""
         if event.type == self.MUSIC_END and self.music_enabled:
             try:
                 if self.current_mode == "menu":
@@ -64,8 +62,6 @@ class MusicManager:
         if os.path.exists(path):
             pygame.mixer.music.load(path)
             pygame.mixer.music.play()
-        else:
-            print(f"Missing track: {path}")
 
     def start_classic_mode_music(self):
         self.current_mode = "classic"
@@ -85,16 +81,11 @@ class MusicManager:
         self.current_mode = "hard"
         self._play_track("hard_mode.mp3")
 
-    def stop(self):
-        if self.music_enabled:
-            pygame.mixer.music.stop()
-
-
 class SoundEffectManager:
     def __init__(self):
         self.sounds = {}
         self.initialized = False
-        self.volume = 0.5  # Default volume
+        self.volume = 0.5
 
     def initialize(self):
         if self.initialized: return
@@ -108,7 +99,7 @@ class SoundEffectManager:
                 return snd
             return None
 
-        # 1. Load Walk Sounds
+        # Load âm thanh bước chân
         for variant in ['15', '30', '60']:
             self.sounds[f'exp_start_{variant}'] = load(f'expwalk{variant}a.wav')
             self.sounds[f'exp_end_{variant}'] = load(f'expwalk{variant}b.wav')
@@ -118,15 +109,14 @@ class SoundEffectManager:
         self.sounds['scorp_1'] = load('scorpwalk1.wav')
         self.sounds['scorp_2'] = load('scorpwalk2.wav')
 
-        # 2. Load Action Sounds
+        # Load hiệu ứng hành động
         self.sounds['pummel'] = load('pummel.wav')
         self.sounds['tombslide'] = load('tombslide.wav')
         self.sounds['gate'] = load('gate.wav')
-
-        # --- FIX: Ensure these are loaded for the death/ankh logic ---
+        self.sounds['block'] = load('block.wav') # Tiếng bẫy rơi
         self.sounds['badankh'] = load('badankh.wav')
+        self.sounds['mummyhowl'] = load('mummyhowl.wav')
         self.sounds['poison'] = load('poison.wav')
-        # -------------------------------------------------------------
 
         self.initialized = True
 

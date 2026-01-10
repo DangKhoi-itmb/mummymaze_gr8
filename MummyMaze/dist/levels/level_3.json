@@ -1,27 +1,83 @@
 {
-"difficulty": "hard",
-"mazeType": "8",
-"player": { "x": 0, "y": 7, "direction": "up" },
-"exit": { "x": 7, "y": 0 },
-"enemies": [
-    { "type": "red_scorpion", "x": 0, "y": 0 },
-    { "type": "white_mummy", "x": 7, "y": 7 }
-],
-"key": { "x": 4, "y": 4 },
-"gate": { "x": 6, "y": 0 },
-"traps": [
-    { "x": 3, "y": 3 },
-    { "x": 4, "y": 3 }
-],
-"walls": [
-    { "x": 0, "y": 6, "dir": "horizontal" },
-    { "x": 1, "y": 7, "dir": "vertical" },
-    { "x": 2, "y": 5, "dir": "vertical" },
-    { "x": 3, "y": 5, "dir": "horizontal" },
-    { "x": 4, "y": 5, "dir": "horizontal" },
-    { "x": 5, "y": 5, "dir": "vertical" },
-    { "x": 6, "y": 0, "dir": "vertical" },
+  "difficulty": "hard",
+  "mazeType": "10",
+  "player": {
+    "x": 2,
+    "y": 1,
+    "direction": "down"
+  },
+  "exit": {
+    "x": 9,
+    "y": 0
+  },
+  "enemies": [
+    {
+      "type": "red_mummy",
+      "x": 0,
+      "y": 9
+    },
+    {
+      "type": "red_scorpion",
+      "x": 9,
+      "y": 5
+    }
+  ],
+  "key": {
+    "x": 9,
+    "y": 9
+  },
+  "gate": {
+    "x": 7,
+    "y": 1
+  },
+  "traps": [
+    { "x": 4, "y": 7 },
+    { "x": 5, "y": 7 }
+  ],
+  "walls": [
+    { "x": 1, "y": 0, "dir": "vertical" },
+    { "x": 3, "y": 0, "dir": "vertical" },
+    { "x": 5, "y": 0, "dir": "vertical" },
+    { "x": 8, "y": 0, "dir": "vertical" },
+
+    { "x": 2, "y": 1, "dir": "horizontal" },
     { "x": 6, "y": 1, "dir": "horizontal" },
-    { "x": 7, "y": 2, "dir": "horizontal" }
-]
+    { "x": 7, "y": 1, "dir": "vertical" },
+
+    { "x": 1, "y": 2, "dir": "vertical" },
+    { "x": 3, "y": 2, "dir": "vertical" },
+    { "x": 5, "y": 2, "dir": "vertical" },
+    { "x": 9, "y": 2, "dir": "horizontal" },
+
+    { "x": 0, "y": 3, "dir": "horizontal" },
+    { "x": 2, "y": 3, "dir": "horizontal" },
+    { "x": 4, "y": 3, "dir": "horizontal" },
+    { "x": 6, "y": 3, "dir": "vertical" },
+
+    { "x": 1, "y": 4, "dir": "vertical" },
+    { "x": 3, "y": 4, "dir": "vertical" },
+    { "x": 5, "y": 4, "dir": "vertical" },
+    { "x": 7, "y": 4, "dir": "horizontal" },
+
+    { "x": 2, "y": 5, "dir": "horizontal" },
+    { "x": 5, "y": 5, "dir": "vertical" },
+    { "x": 8, "y": 5, "dir": "vertical" },
+
+    { "x": 0, "y": 6, "dir": "horizontal" },
+    { "x": 3, "y": 6, "dir": "vertical" },
+    { "x": 5, "y": 6, "dir": "vertical" },
+    { "x": 6, "y": 6, "dir": "horizontal" },
+
+    { "x": 1, "y": 7, "dir": "vertical" },
+    { "x": 2, "y": 7, "dir": "horizontal" },
+    { "x": 7, "y": 7, "dir": "vertical" },
+
+    { "x": 4, "y": 8, "dir": "vertical" },
+    { "x": 5, "y": 8, "dir": "vertical" },
+    { "x": 8, "y": 8, "dir": "horizontal" },
+
+    { "x": 1, "y": 9, "dir": "vertical" },
+    { "x": 3, "y": 9, "dir": "vertical" },
+    { "x": 6, "y": 9, "dir": "vertical" }
+  ]
 }

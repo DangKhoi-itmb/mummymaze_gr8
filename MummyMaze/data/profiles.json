@@ -1,0 +1,186 @@
+{
+    "aaa": {
+        "username": "aaa",
+        "display_name": "aaa",
+        "password_hash": "3e744b9dc39389baf0c5a0660589b8402f3dbb49b89b3e75f2c9355852a3c677",
+        "data": {
+            "unlocked_levels": [
+                1
+            ],
+            "best_scores": {},
+            "options": {
+                "music_on": true,
+                "sfx_on": true,
+                "language": "en"
+            }
+        }
+    },
+    "aaaa": {
+        "username": "aaaa",
+        "display_name": "aaaa",
+        "password_hash": "81cc5b17018674b401b42f35ba07bb79e211239c23bffe658da1577e3e646877",
+        "data": {
+            "unlocked_levels": [
+                1
+            ],
+            "best_scores": {},
+            "options": {
+                "music_on": true,
+                "sfx_on": true,
+                "language": "en"
+            }
+        }
+    },
+    "admin": {
+        "username": "admin",
+        "display_name": "admin",
+        "password_hash": "8b7293f6dd93853c83bf8c87ec5349a41789fa166a9431f108edb538e6fd82fd",
+        "data": {
+            "unlocked_levels": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "best_scores": {
+                "1": 9574,
+                "2": 8596,
+                "3": 9432
+            },
+            "options": {
+                "music_on": true,
+                "sfx_on": true,
+                "language": "en"
+            },
+            "saved_game": {
+                "level_id": null,
+                "difficulty": "easy",
+                "maze_size": 6,
+                "player": {
+                    "x": 4,
+                    "y": 0,
+                    "direction": "down"
+                },
+                "enemies": [
+                    {
+                        "type": "red_mummy",
+                        "x": 5,
+                        "y": 5,
+                        "dir": "down"
+                    }
+                ],
+                "key": null,
+                "gate": null,
+                "gate_open": true,
+                "traps": [],
+                "walls": [
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "dir": "both"
+                    },
+                    {
+                        "x": 0,
+                        "y": 1,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 0,
+                        "y": 2,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 0,
+                        "y": 3,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 0,
+                        "y": 4,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 0,
+                        "y": 5,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 1,
+                        "y": 0,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 1,
+                        "y": 2,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 1,
+                        "y": 3,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 1,
+                        "y": 4,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 1,
+                        "y": 5,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 2,
+                        "y": 0,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 2,
+                        "y": 1,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 2,
+                        "y": 3,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 3,
+                        "y": 2,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 4,
+                        "y": 0,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 4,
+                        "y": 1,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 4,
+                        "y": 2,
+                        "dir": "horizontal"
+                    },
+                    {
+                        "x": 4,
+                        "y": 3,
+                        "dir": "vertical"
+                    },
+                    {
+                        "x": 4,
+                        "y": 5,
+                        "dir": "horizontal"
+                    }
+                ],
+                "exit": {
+                    "x": 1,
+                    "y": 6
+                },
+                "is_custom": true
+            }
+        }
+    }
+}
