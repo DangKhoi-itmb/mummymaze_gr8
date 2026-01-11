@@ -37,6 +37,7 @@ PHẦN 1: HƯỚNG DẪN SỬ DỤNG (USER GUIDE)
 4. Các tính năng hỗ trợ trong màn chơi
 
   Giao diện chơi game cung cấp bộ công cụ mạnh mẽ bên tay trái:
+  
     UNDO MOVE: Đi sai một nước? Nhấn nút này để quay lại nước đi trước đó (cực kỳ hữu ích khi lỡ tay).
     
     RESET MAZE: Chơi lại màn hiện tại từ đầu (nếu lỡ đi vào ngõ cụt).
