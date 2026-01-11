@@ -23,7 +23,7 @@ Sau khi đăng nhập thành công, bạn có các lựa chọn:
 
    LOG OUT: Đăng xuất để đổi tài khoản.
    
-7. Luật chơi & Cách chơi (Gameplay)
+3. Luật chơi & Cách chơi (Gameplay)
 
    Mục tiêu: Điều khiển nhà thám hiểm đi đến ô cầu thang (lối ra) để qua màn kế tiếp.
 
@@ -38,7 +38,7 @@ Sau khi đăng nhập thành công, bạn có các lựa chọn:
    
    Vật phẩm: Chìa khóa được sử dụng khi quái hoặc nhân vật trùng vị trí thì sẽ mở cửa, đóng vai trò như một công tắc đóng mở.
    
-8. Các tính năng hỗ trợ trong màn chơi:
+4. Các tính năng hỗ trợ trong màn chơi:
 
   Giao diện chơi game cung cấp bộ công cụ mạnh mẽ bên tay trái:
   
