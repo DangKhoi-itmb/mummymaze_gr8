@@ -11,15 +11,19 @@ PHẦN 1: HƯỚNG DẪN SỬ DỤNG (USER GUIDE)
    Đăng nhập: Nhập thông tin đã đăng ký và nhấn LOGIN
 
    
-2. Màn hình chính (Main Menu)Sau khi đăng nhập thành công, bạn có các lựa chọn:
+2. Màn hình chính (Main Menu)
 
-   CLASSIC MODE: Bắt đầu chơi game theo cốt truyện (hoặc nhấn CONTINUE để chơi tiếp màn đang dang dở).
+Sau khi đăng nhập thành công, bạn có các lựa chọn:
+
+   CLASSIC MODE: Bắt đầu chơi game theo cốt truyện.
 
    LEADERBOARD: Xem bảng xếp hạng thành tích của các người chơi khác (xếp hạng theo Tổng thời gian hoàn thành).
 
+   CONTINUE : Nhấn vào để tiếp tục tiến trình chơi đã được lưu lại thay vì phải chơi lại từ đầu.
+
    LOG OUT: Đăng xuất để đổi tài khoản.
    
-3. Luật chơi & Cách chơi (Gameplay)
+7. Luật chơi & Cách chơi (Gameplay)
 
    Mục tiêu: Điều khiển nhà thám hiểm đi đến ô cầu thang (lối ra) để qua màn kế tiếp.
 
@@ -32,9 +36,9 @@ PHẦN 1: HƯỚNG DẪN SỬ DỤNG (USER GUIDE)
 
      Mẹo: Có thể dụ 2 con xác ướp va vào nhau, một con sẽ bị tiêu diệt giúp màn chơi dễ hơn.
    
-   Vật phẩm: Ở các màn khó, bạn cần nhặt Chìa khóa (Ankh) để mở cửa trước khi đến được lối ra.
+   Vật phẩm: Chìa khóa được sử dụng khi quái hoặc nhân vật trùng vị trí thì sẽ mở cửa, đóng vai trò như một công tắc đóng mở.
    
-4. Các tính năng hỗ trợ trong màn chơi:
+8. Các tính năng hỗ trợ trong màn chơi:
 
   Giao diện chơi game cung cấp bộ công cụ mạnh mẽ bên tay trái:
   
@@ -50,17 +54,11 @@ SHOWING SOLUTION: (Tính năng AI) Tự động giải màn chơi nếu bạn b�
    
    Nhấn vào nút OPTIONS để mở bảng cài đặt:
 
-   RESUME: Tiếp tục chơi.SAVE GAME: Lưu lại tiến độ hiện tại.
-
    MUSIC: Tăng/Giảm âm lượng nhạc nền.
 
    SFX: Tăng/Giảm âm lượng hiệu ứng âm thanh (tiếng bước chân, tiếng quái...).
 
    QUIT TO MENU: Thoát ra màn hình chính.
-
-
-•	Quay về Menu : Nhấn phím ESC thì game sẽ thoát ra màn hình Menu chính. 
-
 
 PHẦN 2: HƯỚNG DẪN CÀI ĐẶT (INSTALLATION GUIDE)
 
