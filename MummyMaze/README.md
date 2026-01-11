@@ -1,77 +1,88 @@
-Hướng dẫn hệ thống đăng nhập và lưu game – Mummy Maze. 
+PHẦN 1: HƯỚNG DẪN SỬ DỤNG (USER GUIDE)
 
+1. Đăng nhập & Đăng ký (Login/Register)
 
-I.	Màn hình đăng nhập (Login Screen).
+   Khi mở game, bạn sẽ gặp màn hình đăng nhập. Hệ thống yêu cầu tài khoản để lưu trữ tiến độ chơi và bảng xếp hạng.
+   
+   Đăng ký: Nhập User (Tên đăng nhập) và Pass (Mật khẩu). Sau đó nhấn nút REGISTER.
+   
+     Lưu ý: Mật khẩu phải có độ dài tối thiểu 4 ký tự. Tên đăng nhập không được trùng với người khác.
+   
+   Đăng nhập: Nhập thông tin đã đăng ký và nhấn LOGIN
 
+   
+2. Màn hình chính (Main Menu)Sau khi đăng nhập thành công, bạn có các lựa chọn:
 
-Khi khởi động game, giao diện đầu tiên xuất hiện sẽ là màn hình đăng nhập, khi đó bạn có 3 lựa chọn : 
+   CLASSIC MODE: Bắt đầu chơi game theo cốt truyện (hoặc nhấn CONTINUE để chơi tiếp màn đang dang dở).
 
+   LEADERBOARD: Xem bảng xếp hạng thành tích của các người chơi khác (xếp hạng theo Tổng thời gian hoàn thành).
 
-A.	Đăng ký tài khoản mới (Register).
+   LOG OUT: Đăng xuất để đổi tài khoản.
+   
+3. Luật chơi & Cách chơi (Gameplay)
 
+   Mục tiêu: Điều khiển nhà thám hiểm đi đến ô cầu thang (lối ra) để qua màn kế tiếp.
 
-Nếu bạn chưa có tài khoản, hãy làm theo các bước sau:
+   Điều khiển: Sử dụng các nút mũi tên Lên / Xuống / Trái / Phải hiển thị trên màn hình (hoặc bàn phím) để di chuyển nhân vật.
 
+   Kẻ thù (Xác ướp):
+     Mỗi khi bạn đi 1 bước, xác ướp cũng sẽ di chuyển theo quy luật riêng để săn đuổi bạn.
+   
+     Nếu bị xác ướp bắt được thì sẽ GAME OVER.
 
-1.	 Nhập tên đăng nhập vào ô username.	 
-2.	Nhập mật khẩu vào ô password.
-3.	 Nhấn nút Register.
+     Mẹo: Có thể dụ 2 con xác ướp va vào nhau, một con sẽ bị tiêu diệt giúp màn chơi dễ hơn.
+   
+   Vật phẩm: Ở các màn khó, bạn cần nhặt Chìa khóa (Ankh) để mở cửa trước khi đến được lối ra.
+   
+4. Các tính năng hỗ trợ trong màn chơi
 
+  Giao diện chơi game cung cấp bộ công cụ mạnh mẽ bên tay trái:
+    UNDO MOVE: Đi sai một nước? Nhấn nút này để quay lại nước đi trước đó (cực kỳ hữu ích khi lỡ tay).
+    
+    RESET MAZE: Chơi lại màn hiện tại từ đầu (nếu lỡ đi vào ngõ cụt).
+    
+    WORLD MAP: Xem sơ đồ kim tự tháp để biết mình đang ở tầng nào.
+    
+    SHOWING SOLUTION: (Tính năng AI) Tự động giải màn chơi nếu bạn bị bí đường.
+    
+5. Cài đặt (Options)
+   
+   Nhấn vào nút OPTIONS để mở bảng cài đặt:
 
-Khi đó nếu thành công thì game sẽ tự động đăng nhập và chuyển sang menu chính, còn nếu thất bại thì sẽ xuất hiện dòng chữ “Tai khoan da ton tai” màu đỏ bên dưới. Khi đó hãy chọn tên khác. 
+   RESUME: Tiếp tục chơi.SAVE GAME: Lưu lại tiến độ hiện tại.
 
+   MUSIC: Tăng/Giảm âm lượng nhạc nền.
 
-B.	 Đăng nhập (Login). 
+   SFX: Tăng/Giảm âm lượng hiệu ứng âm thanh (tiếng bước chân, tiếng quái...).
 
-
-Dành cho người chơi đã có tài khoản:
-
-
-1.	Nhập username và password đã đăng ký.
-2.	Nhấn nút Login.
-
-
-Nếu thành công thì màn hình sẽ chuyển vào menu chính với tên hiển thị của bạn, nếu thất bại thì hệ thống báo “Sai ten dang nhap hoac mat khau”.
-
-
-C.	Chơi thử (Guest).
-
-
-Nếu muốn chơi nhanh chóng mà không cần tạo tài khoản:
-
-
-•	Nhấn nút chơi thử. 
-
-
-•	Lưu ý: Tài khoản khách dùng chung một file lưu dữ liệu có thể bị ghi đè bởi người chơi khách khác.
-
-
-II.	Menu chính. 
-
-
-Sau khi đăng nhập thành công, bạn sẽ thấy các lựa chọn sau:
-
-
-•	Phím Enter – Chơi mới (New game) : Bắt đầu lại từ level 1 với đầy đủ máu và chỉ số mặc định.
-
-
-•	Phím L – Tiếp tục (Load game) : Tải lại màn chơi từ lần lưu gần nhất của tài khoản này.
-
-
-•	Nếu chưa có file save, hệ thống sẽ báo lỗi trong Terminal (Console).
-
-
-•	Phím Q – Thoát (Quit) : Đóng game. 
-
-
-III.	Trong màn chơi & cách lưu game.
-
-
-Khi đang trong mê cung, bạn sử dụng các phím sau để điều khiển và hệ thống:
-
-
-•	Lưu game (Save) : Nhấn phím S thì trạng thái hiện tại (vị trí nhân vật, quái vật, số bước đi, level hiện tại) sẽ được lưu vào hệ thống và dòng chữ saved sẽ xuất hiện ở cửa sổ terminal/console.
+   QUIT TO MENU: Thoát ra màn hình chính.
 
 
 •	Quay về Menu : Nhấn phím ESC thì game sẽ thoát ra màn hình Menu chính. 
+
+
+PHẦN 2: HƯỚNG DẪN CÀI ĐẶT (INSTALLATION GUIDE)
+
+Để chạy được source code của game trên máy tính, bạn cần làm theo các bước sau:
+
+Yêu cầu hệ thống
+  Máy tính đã cài đặt Python (Khuyên dùng phiên bản 3.10 trở lên).
+
+  Phần mềm chỉnh sửa code (Visual Studio Code hoặc PyCharm).
+  
+Bước 1: Tải mã nguồn
+
+  Tải trọn bộ source code của nhóm về máy và giải nén.
+
+Bước 2: Cài đặt thư viện
+
+  Game sử dụng thư viện Pygame. Bạn cần mở Terminal (CMD) tại thư mục chứa game và chạy lệnh sau để cài đặt:pip install pygame
+
+Bước 3 : Khởi chạy game
+
+  Mở thư mục game bằng VS Code.
+
+  Mở file main.py (hoặc start.py).
+
+  Nhấn nút Run (hình tam giác) ở góc trên bên phải.
 
