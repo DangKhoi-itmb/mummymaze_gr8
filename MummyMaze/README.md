@@ -34,17 +34,17 @@ PHẦN 1: HƯỚNG DẪN SỬ DỤNG (USER GUIDE)
    
    Vật phẩm: Ở các màn khó, bạn cần nhặt Chìa khóa (Ankh) để mở cửa trước khi đến được lối ra.
    
-4. Các tính năng hỗ trợ trong màn chơi
+4. Các tính năng hỗ trợ trong màn chơi:
 
   Giao diện chơi game cung cấp bộ công cụ mạnh mẽ bên tay trái:
   
-    UNDO MOVE: Đi sai một nước? Nhấn nút này để quay lại nước đi trước đó (cực kỳ hữu ích khi lỡ tay).
-    
-    RESET MAZE: Chơi lại màn hiện tại từ đầu (nếu lỡ đi vào ngõ cụt).
-    
-    WORLD MAP: Xem sơ đồ kim tự tháp để biết mình đang ở tầng nào.
-    
-    SHOWING SOLUTION: (Tính năng AI) Tự động giải màn chơi nếu bạn bị bí đường.
+UNDO MOVE: Đi sai một nước? Nhấn nút này để quay lại nước đi trước đó (cực kỳ hữu ích khi lỡ tay).
+
+RESET MAZE: Chơi lại màn hiện tại từ đầu (nếu lỡ đi vào ngõ cụt).
+
+WORLD MAP: Xem sơ đồ kim tự tháp để biết mình đang ở tầng nào.
+
+SHOWING SOLUTION: (Tính năng AI) Tự động giải màn chơi nếu bạn bị bí đường.
     
 5. Cài đặt (Options)
    
